@@ -1,0 +1,33 @@
+.board {
+    margin: auto;
+    inline-size: 2px;
+    width: 200px;
+    height: 200px;
+    color: black;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 2px;
+    outline: auto;
+    background-color: gray;
+  }
+
+  .hide {
+      visibility: hidden;
+  }
+
+  .show {
+      visibility: visible;
+  }
+
+  .difficulties {
+text-align: center;
+  }
+
+  .buttons {
+      text-align: center;
+  }
