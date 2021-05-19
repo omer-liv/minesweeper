@@ -4,6 +4,8 @@ const MINE = '💣';
 const FLAG = '🚩';
 const NUM = '';
 
+var gIntervalId;
+var gTime = 0;
 var gBoard;
 var gLevel = {
     size: 4,
@@ -16,6 +18,10 @@ function initGame() {
     gBoard = buildBoard();
     renderBoard(gBoard, '.board');
     buildCell(gBoard);
+
+}
+
+function gameOver() {
 
 }
 
@@ -38,6 +44,11 @@ function setHard() {
 }
 
 function cellClicked(i, j) {
+    clearInterval(gIntervalId);
+    gIntervalId = setInterval(function () {
+        gTime += 1
+        document.querySelector('h3').innerText = gTime;
+    }, 1000)
     var cell = gBoard[i][j]
     cell.isShown = true;
     if (cell.isMine) renderCell(cell.location, MINE)
