@@ -219,6 +219,10 @@ function setMinesNegsCount(mat, cell) {
 }
 
 function showSafeCell() {
+    if (gIsGameOver) {
+        document.querySelector('.safebutton').innerText = 'Game Over';
+        return;
+    }
     if (!gSafeCount) return;
     gSafeCount--;
     var emptyCells = [];
@@ -232,13 +236,13 @@ function showSafeCell() {
     var safeCell = emptyCells[safeCellIdx];
     var elCell = document.querySelector(`.cell${safeCell.location.i}-${safeCell.location.j}`);
     elCell.classList.add('safecell');
-    setTimeout(function()  {
+    setTimeout(function () {
         elCell.classList.remove('safecell')
     }, 1000);
     if (gSafeCount === 2) document.querySelector('.safebutton').innerText = 'SAFE: 2'
     if (gSafeCount === 1) document.querySelector('.safebutton').innerText = 'SAFE: 1'
     if (gSafeCount === 0) document.querySelector('.safebutton').innerText = 'No More'
-    
+
 }
 
 function removeSafeCell(elCell) {
