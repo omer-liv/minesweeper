@@ -1,33 +1,63 @@
+body {
+    background-color: rgb(214, 147, 147);
+}
+
+.difficulties {
+    color: rgb(2, 0, 141);
+    font-size: 30px;
+    font-style: italic;
+}
 .board {
     margin: auto;
     inline-size: 2px;
-    width: 200px;
-    height: 200px;
     color: black;
-} 
+    display: flex;
+    justify-content: center;
+}  
+
+.restartbtn {
+    margin-bottom: 2px;
+    width: 50px;
+    height: 50px;
+}
+
+.flagcount {
+    display: inline;
+    margin-right: 40px;
+    margin-bottom: 2px;
+}
 
 .timer {
     text-align: center;
     margin-bottom: 2px;
+    margin-left: 40px;
+    display: inline;
+}
+
+.control {
+    text-align: center;
+    justify-content: center;
 }
 
 .cell {
-    width: 40px;
-    height: 40px;
+    min-width: 35px;
+    height: 35px;
     text-align: center;
     font-size: 1.5em;
-    border: 2px;
     outline: auto;
-    background-color: gray;
+    outline-color: rgb(158, 80, 80);
+    background-color: rgb(194, 194, 194);
+    font-weight: bold;
+    font-style:oblique;
   }
 
-  .hide {
-      visibility: hidden;
+  .cell:hover {
+      background-color: rgb(182, 182, 182);
   }
-
-  .show {
-      visibility: visible;
-  }
+.lives {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
   .difficulties {
 text-align: center;
@@ -35,4 +65,38 @@ text-align: center;
 
   .buttons {
       text-align: center;
+      margin-bottom: 40px;
+  }
+  button {
+      background-color: darkmagenta;
+      color: darkturquoise;
+      border-radius: 10%;
+      font-size: 5mm;
+  }
+
+  .smileybtn {
+      background-color: rgb(2, 0, 141);
+      font-size: 4.5mm;
+      border-radius: 30%;
+  }
+
+  .markedcell {
+    background-color: rgb(168, 168, 168);
+    font-weight: light; 
+  }
+
+  footer {
+      color: rgb(21, 10, 175);
+      display: flex;
+      margin-bottom: 10px;
+  }
+
+  .safe {
+      margin: auto;
+      text-align: center;
+      
+  }
+
+  .safecell {
+      background-color: rgb(255, 255, 155);
   }

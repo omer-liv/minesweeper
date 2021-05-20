@@ -9,21 +9,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="initGame()">
-    <div class="difficulties">Select difficulty</div>
+<body onload="initGame()" oncontextmenu="return false;">
+    <h2 class="difficulties">Select difficulty</h2>
     <div class="buttons">
-        <button onclick="setEasy()">👶</button>
-        <button onclick="setMedium()">😐</button>
-        <button onclick="setHard()">😈</button>
+        <button onclick="setEasy()">Easy</button>
+        <button onclick="setMedium()">Medium</button>
+        <button onclick="setHard()">Hard</button>
     </div>
-    <h3 class="timer">0</h3>
-
+    <div class="control">
+        <h3 class="flagcount">0</h3>
+        <button class="smileybtn" onclick="initGame()">🙂</button>
+        <h3 class="timer">0</h3>
+    </div>
+    
     <div class="board"></div>
+    <div class="safe"><button class="safebutton" onclick="showSafeCell()">SAFE: 3</button> </div>
+    <div class="lives">Lives: 👾👾👾</div>
 
 
 
     <script src="js/util.js"></script>
     <script src="js/game.js"></script>
 </body>
-
+<footer>&copy; Omer liv</footer>
 </html>
